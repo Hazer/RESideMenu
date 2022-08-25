@@ -1,15 +1,14 @@
 // swift-tools-version:4.2
+
 import PackageDescription
 
 let package = Package(
     name: "RESideMenu",
     products: [
-        .library(name: "RESideMenu", targets: ["RESideMenu"])
+        .library(name: "RESideMenu", targets: ["RESideMenu"]),
     ],
     targets: [
-        .target(
-            name: "RESideMenu",
-            path: "RESideMenu"
-        )
+        .target(name: "RESideMenu", path: "./RESideMenu"),
+        .testTarget(name: "RESideMenuTests", dependencies: ["RESideMenu"], path: "./RESideMenu"),
     ]
 )
